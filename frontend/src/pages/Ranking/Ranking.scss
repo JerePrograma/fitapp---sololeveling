@@ -1,0 +1,28 @@
+@import "../../styles/globalStyles";
+
+.rankingContainer {
+  @extend .centeredContent;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .rankingList {
+    width: 100%;
+    max-width: 600px;
+
+    ion-item {
+      background: var(--item-background);
+      margin-bottom: 1rem;
+      border-radius: var(--item-border-radius);
+      padding: 1rem;
+
+      strong {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        text-shadow: var(--text-shadow);
+      }
+    }
+  }
+}

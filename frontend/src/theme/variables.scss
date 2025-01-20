@@ -1,0 +1,61 @@
+:root {
+  --background-color: #0a0f2d; // Fondo oscuro gamer
+  --primary-color: #8ab4f8; // Azul brillante para textos destacados
+  --secondary-color: #ffffff; // Blanco para textos generales
+  --item-background: rgba(0, 30, 60, 0.8); // Fondo de ítems y tarjetas
+  --item-border-radius: 8px; // Bordes suaves
+  --button-background: #3949ab; // Botón azul
+  --button-hover: #5c6bc0; // Hover del botón
+  --completed-color: #6cf36c; // Verde para estados completados
+  --text-shadow: 0 0 8px var(--primary-color); // Sombra de texto brillante
+}
+
+body,
+html,
+ion-app {
+  background: url("/assets/background.png") no-repeat center center fixed;
+  background-size: cover;
+  color: var(--secondary-color);
+  font-family: "Orbitron", "Roboto", sans-serif;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); // Oscurecimiento global
+    z-index: -1;
+  }
+}
+
+h2,
+h1 {
+  color: var(--primary-color);
+  text-shadow: var(--text-shadow);
+}
+
+p,
+label {
+  color: var(--secondary-color);
+}
+
+ion-button {
+  --background: var(--button-background);
+  --color: var(--secondary-color);
+  --border-radius: var(--item-border-radius);
+
+  &:hover {
+    --background: var(--button-hover);
+  }
+}
+
+.centeredContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}

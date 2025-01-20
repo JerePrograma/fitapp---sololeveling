@@ -1,0 +1,43 @@
+@import "../../styles/globalStyles";
+
+.homeContainer {
+  @extend .centeredContent;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .userInfo {
+    margin-bottom: 2rem;
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .misionesList {
+    width: 100%;
+    max-width: 600px;
+
+    ion-item {
+      background: var(--item-background);
+      margin-bottom: 1rem;
+      border-radius: var(--item-border-radius);
+      padding: 1rem;
+
+      strong {
+        color: var(--primary-color);
+      }
+
+      .completed {
+        color: var(--completed-color);
+        font-weight: bold;
+      }
+
+      ion-button {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

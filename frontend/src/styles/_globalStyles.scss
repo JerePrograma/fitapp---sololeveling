@@ -1,0 +1,54 @@
+.centeredContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinea al inicio, no al centro */
+  align-items: center;
+  text-align: center;
+  padding: 2rem; /* Espaciado interno */
+  gap: 1rem; /* Espacio entre elementos hijos */
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+  backdrop-filter: blur(5px); /* Efecto de desenfoque */
+  border-radius: 12px; /* Bordes redondeados */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    opacity: 0.3; /* Hace la imagen semitransparente */
+    z-index: -1;
+  }
+}
+
+ion-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 1rem; /* Espaciado interno del ítem */
+  background: var(--item-background); /* Fondo de los ítems */
+  border-radius: var(--item-border-radius); /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+
+  .item-inner {
+    display: flex;
+    flex-direction: column; /* Alinea contenido interno verticalmente */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  strong,
+  p {
+    margin: 0; /* Elimina márgenes no deseados */
+    text-align: center;
+    color: var(--secondary-color);
+  }
+}

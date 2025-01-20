@@ -1,0 +1,44 @@
+@import "../../styles/globalStyles";
+
+.profileContainer {
+  @extend .centeredContent;
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+
+  .profileDetails {
+    background: var(--item-background);
+    padding: 1.5rem;
+    border-radius: var(--item-border-radius);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+
+    p {
+      color: var(--secondary-color);
+    }
+  }
+
+  .formContainer {
+    width: 100%;
+    max-width: 600px;
+
+    ion-item {
+      margin-bottom: 1rem;
+
+      ion-label {
+        color: var(--primary-color);
+      }
+      ion-input {
+        color: var(--secondary-color);
+      }
+    }
+
+    ion-button {
+      width: 100%;
+    }
+  }
+}

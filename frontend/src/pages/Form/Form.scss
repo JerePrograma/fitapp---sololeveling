@@ -1,0 +1,43 @@
+@import "../../styles/globalStyles";
+
+.formContainer {
+  @extend .centeredContent;
+
+  form {
+    width: 100%;
+    max-width: 500px;
+    background: var(--item-background);
+    padding: 1.5rem;
+    border-radius: var(--item-border-radius);
+
+    ion-item {
+      margin-bottom: 1rem;
+
+      ion-label {
+        color: var(--primary-color);
+      }
+
+      ion-input {
+        color: var(--secondary-color);
+      }
+    }
+
+    ion-button {
+      width: 100%;
+    }
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+
+    &.error {
+      color: red;
+    }
+
+    &.success {
+      color: limegreen;
+    }
+  }
+}
