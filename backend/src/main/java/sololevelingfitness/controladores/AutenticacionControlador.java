@@ -38,7 +38,7 @@ public class AutenticacionControlador {
 /*    private Usuario cargarUsuarioPorEmail(String email) {
         UserDetails userDetails = usuarioRepositorio.findByEmail(email);
         if (userDetails == null) {
-            throw new RuntimeException("Usuario no encontrado con el correo electrónico: " + email);
+            throw new RuntimeException("Usuario no encontrado con el correo electronico: " + email);
         }
         return (Usuario) userDetails;
     }*/

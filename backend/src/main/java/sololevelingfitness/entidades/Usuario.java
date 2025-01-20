@@ -42,7 +42,7 @@ public class Usuario implements UserDetails {
         return contrasena;
     }
 
-    // Por convención, si inicias sesión con "nombreUsuario":
+    // Por convencion, si inicias sesion con "nombreUsuario":
     @Override
     public String getUsername() {
         return nombreUsuario;
@@ -51,21 +51,21 @@ public class Usuario implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return true;  // Lógica real si lo requieres
+        return true;  // Logica real si lo requieres
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return true;  // Lógica real si lo requieres
+        return true;  // Logica real si lo requieres
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return true;  // Lógica real si lo requieres
+        return true;  // Logica real si lo requieres
     }
 
     @Override
     public boolean isEnabled() {
-        return true;  // Lógica real si lo requieres
+        return true;  // Logica real si lo requieres
     }
 }

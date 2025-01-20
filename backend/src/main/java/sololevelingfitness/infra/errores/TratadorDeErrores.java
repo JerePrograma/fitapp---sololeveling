@@ -54,7 +54,7 @@ public class TratadorDeErrores {
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<DatosErrorGeneral> manejarErrorDeArgumentoInvalido(IllegalArgumentException e) {
         var error = new DatosErrorGeneral(
-                "Argumento inválido",
+                "Argumento invalido",
                 e.getMessage(),
                 LocalDateTime.now()
         );
@@ -62,7 +62,7 @@ public class TratadorDeErrores {
     }
 
 
-    // Clase para errores de validación de campos específicos
+    // Clase para errores de validacion de campos especificos
     private record DatosErrorValidacion(String campo, String mensaje) {
         public DatosErrorValidacion(FieldError error) {
             this(error.getField(), error.getDefaultMessage());

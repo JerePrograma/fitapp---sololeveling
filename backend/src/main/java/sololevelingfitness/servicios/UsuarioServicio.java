@@ -36,7 +36,7 @@ public class UsuarioServicio {
     public String registrarUsuario(RegistroUsuarioDTO datosRegistro) {
         Optional<Usuario> usuarioExistente = usuarioRepositorio.findByEmail(datosRegistro.email());
         if (usuarioExistente.isPresent()) {
-            throw new IllegalArgumentException("El email ya está en uso.");
+            throw new IllegalArgumentException("El email ya esta en uso.");
         }
 
         Usuario nuevoUsuario = new Usuario();
@@ -71,7 +71,7 @@ public class UsuarioServicio {
     }
 
     /**
-     * Actualiza el nombre de usuario. Si no existe, lanza excepción.
+     * Actualiza el nombre de usuario. Si no existe, lanza excepcion.
      */
     public void actualizarNombreDeUsuario(Long idUsuario, String nuevoNombre) {
         Usuario usuario = usuarioRepositorio.findById(idUsuario)
@@ -82,12 +82,12 @@ public class UsuarioServicio {
     }
 
     /**
-     * Retorna un usuario por su id, o lanza excepción si no existe.
+     * Retorna un usuario por su id, o lanza excepcion si no existe.
      */
     public Usuario obtenerUsuarioPorId(Long idUsuario) {
         return usuarioRepositorio.findById(idUsuario)
                 .orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado"));
     }
 
-    // Podrías tener métodos adicionales para actualizar contraseña, email, etc.
+    // Podrias tener metodos adicionales para actualizar contraseña, email, etc.
 }

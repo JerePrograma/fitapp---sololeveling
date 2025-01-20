@@ -23,7 +23,7 @@ public class AutenticacionService implements UserDetailsService {
                 // El repositorio da la entidad
                 .map(usuario -> (UserDetails) usuario)
                 // Casteas a UserDetails (porque Usuario implementa UserDetails)
-                .orElseThrow(() -> new UsernameNotFoundException("No se encontró un usuario con el email: " + email));
+                .orElseThrow(() -> new UsernameNotFoundException("No se encontro un usuario con el email: " + email));
     }
 
 

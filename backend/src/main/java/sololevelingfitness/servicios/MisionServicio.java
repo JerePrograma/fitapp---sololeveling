@@ -29,7 +29,7 @@ public class MisionServicio {
     }
 
     /**
-     * Resetea las misiones de todos los usuarios cada día a medianoche.
+     * Resetea las misiones de todos los usuarios cada dia a medianoche.
      */
     @Scheduled(cron = "0 0 0 * * ?")
     public void reiniciarMisionesDiarias() {
@@ -47,18 +47,18 @@ public class MisionServicio {
     }
 
     /**
-     * Actualiza el progreso de la misión {misionId} para el usuario {usuarioId}.
+     * Actualiza el progreso de la mision {misionId} para el usuario {usuarioId}.
      * Otorga experiencia si se completa.
      */
     public void actualizarProgresoMision(Long usuarioId, Long misionId, int incremento) {
         Usuario usuario = usuarioRepositorio.findById(usuarioId)
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
         Mision mision = misionRepositorio.findById(misionId)
-                .orElseThrow(() -> new RuntimeException("Misión no encontrada"));
+                .orElseThrow(() -> new RuntimeException("Mision no encontrada"));
 
         MisionUsuario misionUsuario = misionUsuarioRepositorio
                 .findByUsuarioIdAndMisionId(usuarioId, misionId)
-                .orElseThrow(() -> new RuntimeException("No se encontró registro de esa misión para este usuario"));
+                .orElseThrow(() -> new RuntimeException("No se encontro registro de esa mision para este usuario"));
 
         misionUsuario.setProgreso(misionUsuario.getProgreso() + incremento);
 
